@@ -1,0 +1,81 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "version": "1.0.0",
+    "id": "290e8d47-f514-427e-8307-de42af468423",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Uzair Ahmed",
+        "websiteUrl": "https://localhost:53000",
+        "privacyUrl": "https://localhost:53000/index.html#/privacy",
+        "termsOfUseUrl": "https://localhost:53000/index.html#/termsofuse"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Medieval Mashup",
+        "full": "Prototype for a turn-based combat game"
+    },
+    "description": {
+        "short": "Medieval mashup - a turn based combat proof of concept",
+        "full": "Uses react, unity and live share to create a turn-based combat game within a Teams client."
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [],
+    "composeExtensions": [],
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://localhost:53000/index.html#/config",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "team",
+                "groupchat"
+            ],
+            "context": [
+                "meetingStage",
+                "meetingChatTab",
+                "meetingSidePanel",
+                "meetingDetailsTab",
+                "callingSidePanel",
+                "privateChatTab"
+            ]
+        }
+    ],
+    "defaultInstallScope": "meetings",
+    "authorization": {
+        "permissions": {
+            "resourceSpecific": [
+                {
+                    "name": "LiveShareSession.ReadWrite.Chat",
+                    "type": "Delegated"
+                },
+                {
+                    "name": "LiveShareSession.ReadWrite.Group",
+                    "type": "Delegated"
+                },
+                {
+                    "name": "MeetingStage.Write.Chat",
+                    "type": "Delegated"
+                },
+                {
+                    "name": "ChannelMeetingStage.Write.Group",
+                    "type": "Delegated"
+                }
+            ]
+        }
+    },
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "localhost:53000"
+    ],
+    "webApplicationInfo": {
+        "id": "e18a3259-b41b-44c5-9930-b2cde24753ff",
+        "resource": "api://localhost:53000/e18a3259-b41b-44c5-9930-b2cde24753ff"
+    },
+    "showLoadingIndicator": false
+}
